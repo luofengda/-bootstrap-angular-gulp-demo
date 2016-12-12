@@ -2,7 +2,7 @@
 * @Author: luofengda
 * @Date:   2016-12-12 17:06:00
 * @Last Modified by:   luofengda
-* @Last Modified time: 2016-12-12 20:21:39
+* @Last Modified time: 2016-12-12 20:35:45
 */
 
 (function(angular){
@@ -13,7 +13,7 @@
 			templateUrl:'./top250/view.html',
 			contorller:'Top250Contorller'
 		});
-	}]).controller('Top250Controller', ['$scope', function($scope){
+	}]).controller('Top250Contorller', ['$scope', function($scope){
 		
 	}])
 
