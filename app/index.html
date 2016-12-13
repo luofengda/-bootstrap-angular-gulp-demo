@@ -29,13 +29,9 @@
         </nav>
     </div>
     <!-- 顶部导航栏结束 -->
-
-
     <div class="container">
-        
-       <!-- 单页应用程序中：首页、列表页、详情页 展示的位置 -->
-      <div ng-view></div>
-
+        <!-- 单页应用程序中：首页、列表页、详情页 展示的位置 -->
+        <div ng-view></div>
         <!-- 电影详情开始 -->
         <div class="detail">
             <h1>乾隆秘史  大清宝典</h1>
@@ -62,24 +58,20 @@
         </div>
         <!-- 电影详情结束 -->
         <!--其他-->
-        
     </div>
     <footer class="footer">
         <div class="container">
             <p>版权所有&copy; 前端与移动开发学院 前端(允许侵权)</p>
         </div>
     </footer>
-
     <!-- 自动补全C3样式的前缀 -->
     <script src="assets/js/prefixfree.min.js"></script>
     <script src="../node_modules/angular/angular.js"></script>
     <script src="../node_modules/angular-route/angular-route.js"></script>
     <script src="app.js"></script>
-     <script src="home/module.js"></script>
-     <script src="in_theaters/module.js"></script>
-     <script src="coming_soon/module.js"></script>
-     <script src="top250/module.js"></script>
-     <script src="common/win6124JSONP.js"></script>
+    <script src="home/module.js"></script>
+    <script src='movie_list/module.js'></script>
+    <script src="common/win6124JSONP.js"></script>
 </body>
 
 </html>
