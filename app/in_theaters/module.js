@@ -2,7 +2,7 @@
 * @Author: luofengda
 * @Date:   2016-12-12 17:06:00
 * @Last Modified by:   luofengda
-* @Last Modified time: 2016-12-13 16:49:19
+* @Last Modified time: 2016-12-13 17:50:34
 */
 
 (function(angular){
@@ -13,6 +13,8 @@
 		$routeProvider.when('/in_theaters/:page?',{
 			templateUrl:'./in_theaters/view.html',
 			controller:'InTheatersContorller'
+
+
 		});
 	}]).controller('InTheatersContorller', 
 	['$scope','$http','$routeParams','$route','jsonpService', 
