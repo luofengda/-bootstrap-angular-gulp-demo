@@ -1,19 +1,20 @@
-    <div class="list">
-        <ul>
-                <li>
-                <a href="#/details">
-                        <img src="assets/img/sc.jpg" alt="">
-                    </a>
-                  <div class="meta">
-                        <h4><span>乾隆秘史</span> <em>9.9分</em></h4>
-                        <div class="otherinfo">类型:<span>古装</span></div>
-                    </div>
-                </li>
-            </ul>
-            <div class="paging">
-                <label>总共：0条记录,第0/0页;</label>
-                <!-- 加上disable类样式，表示按钮禁用状态 -->
-                <button class="prev disable ">上一页</button>
-                <button class="next">下一页</button>
+<!--电影列表开始-->
+<div class="list">
+    <ul>
+        <li ng-repeat="item in movie.subjects">
+            <a href="#/details">
+                <img ng-src="{{item.images.large}}" alt="">
+            </a>
+            <div>
+                <h4><span>{{item.title}}</span> <em>{{item.rating.average}}</em></h4>
+                <div>类型:<span ng-repeat="gen in item.genres">{{gen}} </span></div>
             </div>
-        </div>
+        </li>
+    </ul>
+      <div class="paging">
+    <label>总共：{{movie.total}}条记录,第{{curPage}}/{{totalPages}}页;</label>
+    <!-- 加上disable类样式，表示按钮禁用状态 -->
+    <button class="prev " ng-class=" {'disable':(curPage-0) <=1}" ng-click="goPage(curPage-1)">上一页</button>
+    <button class="next" ng-class=" {'disable':(curPage-0) >=totalPages}" ng-click="goPage((curPage-0)+1)">下一页</button>
+  </div>
+    </div>>
