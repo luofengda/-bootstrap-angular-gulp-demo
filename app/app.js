@@ -5,7 +5,8 @@
     		'moviecat.home',
             'moviecat.movie_info',
             'moviecat.movie_list',
-            'moivecat.jsonp'
+            'moivecat.jsonp',
+            'moviecat.autoActive'
         ])
         .controller('MainController', ['$scope', '$location', function($scope, $location) {
      	 $scope.query = '';
