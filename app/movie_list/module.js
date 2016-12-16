@@ -2,7 +2,7 @@
 * @Author: luofengda
 * @Date:   2016-12-12 17:06:00
 * @Last Modified by:   luofengda
-* @Last Modified time: 2016-12-16 11:05:42
+* @Last Modified time: 2016-12-16 16:15:39
 */
 
 (function(angular){
@@ -21,6 +21,7 @@
 	}]).controller('MovieListContorller', 
 	['$scope','$http','$routeParams','$route','jsonpService', 
 	function($scope,$http,$routeParams,$route,jsonpService){
+		$scope.mask=true;
 		// 当前处于第几页、 因为要使用路由进行数据的获取
 		// $scope.curPage=1;
 		$scope.curPage=$routeParams.page||1;
@@ -37,9 +38,13 @@
 			$scope.totalPages=Math.ceil(data.total/$scope.pageSize);
 			// console.log($scope.totalPages);
 			// console.log($scope.curPage);
+			
+
+			$scope.mask=false;
 
 			// 要给他触发脏检查的机制
 			$scope.$apply();
+			
 
 		}) ;
 		$scope.goPage=function(curPage){
