@@ -2,7 +2,7 @@
 * @Author: luofengda
 * @Date:   2016-12-12 17:06:00
 * @Last Modified by:   luofengda
-* @Last Modified time: 2016-12-16 20:05:25
+* @Last Modified time: 2016-12-16 22:53:38
 */
 
 (function(angular){
@@ -32,7 +32,9 @@
 		var moiveStart=($scope.curPage-1)*$scope.pageSize;
 		jsonpService.jsonp('http://api.douban.com/v2/movie/'+$routeParams.movieList,{
 			start:moiveStart,
-			count:$scope.pageSize
+			count:$scope.pageSize,
+			// webapi 的服务端只会获取它想要的参数，对于其他额外的参数，是不影响到现有功能的！
+			q: $routeParams.q || ''	// 获取路由的参数，用于搜索功能
 		},function(data){
 			$scope.movie=data;
 			// 计算总的页码数
