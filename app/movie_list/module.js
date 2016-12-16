@@ -2,13 +2,15 @@
 * @Author: luofengda
 * @Date:   2016-12-12 17:06:00
 * @Last Modified by:   luofengda
-* @Last Modified time: 2016-12-13 20:37:39
+* @Last Modified time: 2016-12-16 11:05:42
 */
 
 (function(angular){
 
 	angular.module('moviecat.movie_list',['ngRoute'])
-	.config(['$routeProvider',function($routeProvider) {
+	.config(['$routeProvider','$locationProvider',function($routeProvider,$locationProvider) {
+			// 1.6 版本以后
+				$locationProvider.hashPrefix('');
 		// :page? 使用路由来获取页码数  前面加：表示一个参数
 		$routeProvider.when('/:movieList/:page?',{
 			templateUrl:'./movie_list/view.html',
