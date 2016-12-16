@@ -2,7 +2,7 @@
 * @Author: luofengda
 * @Date:   2016-12-12 17:06:00
 * @Last Modified by:   luofengda
-* @Last Modified time: 2016-12-16 16:15:39
+* @Last Modified time: 2016-12-16 20:05:25
 */
 
 (function(angular){
@@ -24,6 +24,7 @@
 		$scope.mask=true;
 		// 当前处于第几页、 因为要使用路由进行数据的获取
 		// $scope.curPage=1;
+		// console.log($routeParams.page);
 		$scope.curPage=$routeParams.page||1;
 		// 每页显示多少条数据
 		$scope.pageSize=5;
